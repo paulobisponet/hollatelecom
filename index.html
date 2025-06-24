@@ -1,0 +1,2117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Holla Telecom - Internet fibra óptica de alta performance em Água Preta, PE. Planos de 100Mb a 1Gb, suporte IA 24h, app Android e segurança avançada.">
+    <meta name="keywords" content="internet fibra óptica, Água Preta PE, internet alta velocidade, Holla Telecom, provedor internet">
+    <meta name="author" content="Holla Telecom">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Holla Telecom - Internet Fibra Óptica | Água Preta - PE">
+    <meta property="og:description" content="Conectividade superior com tecnologia 100% fibra óptica. Planos a partir de R$ 59,90.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hollatelecom.com.br">
+    
+    <title>Holla Telecom - Internet Fibra Óptica de Alta Performance | Água Preta - PE</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        /* CSS Custom Properties */
+        :root {
+            --primary-blue: #1e3a5f;
+            --secondary-blue: #2c5282;
+            --holla-orange: #ff8c00;
+            --holla-orange-dark: #e67c00;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --dark-gray: #6c757d;
+            --text-dark: #212529;
+            --orange-accent: #ff6b35;
+            
+            /* Design System */
+            --border-radius: 12px;
+            --border-radius-lg: 16px;
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.15s ease;
+            
+            /* Typography */
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 1.875rem;
+            --font-size-4xl: 2.25rem;
+            --font-size-5xl: 3rem;
+        }
+
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Loading Animation */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: var(--transition);
+        }
+
+        .page-loader.loaded {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-content {
+            text-align: center;
+            color: var(--white);
+        }
+
+        .loader-logo {
+            width: 60px;
+            height: 60px;
+            background: var(--holla-orange);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        .loader-logo::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            background: var(--white);
+            border-radius: 50% 50% 50% 0;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(28, 53, 86, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header.scrolled {
+            background: rgba(28, 53, 86, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 700;
+            font-size: var(--font-size-xl);
+            transition: var(--transition-fast);
+        }
+
+        .logo-container:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: var(--holla-orange);
+            border-radius: 50%;
+            margin-right: 12px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background: var(--white);
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: var(--font-size-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+            transition: var(--transition-fast);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--holla-orange);
+            transition: var(--transition-fast);
+        }
+
+        .nav-menu a:hover {
+            color: var(--holla-orange);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn-header {
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: var(--font-size-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: var(--transition-fast);
+            border: 2px solid transparent;
+        }
+
+        .btn-outline-light {
+            color: var(--white);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline-light:hover {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .btn-lime {
+            background: var(--holla-orange);
+            color: var(--white);
+        }
+
+        .btn-lime:hover {
+            background: var(--holla-orange-dark);
+            transform: translateY(-1px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-left: 1rem;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: var(--font-size-lg);
+            transition: var(--transition-fast);
+        }
+
+        .social-links a:hover {
+            color: var(--holla-orange);
+            transform: translateY(-2px);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: var(--font-size-xl);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: var(--transition-fast);
+        }
+
+        .mobile-toggle:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, 
+                var(--primary-blue) 0%, 
+                var(--secondary-blue) 35%, 
+                var(--holla-orange) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            color: var(--white);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-title {
+            font-size: var(--font-size-5xl);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-subtitle {
+            font-size: var(--font-size-xl);
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.8s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: var(--font-size-base);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: var(--transition);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--holla-orange);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            background: var(--holla-orange-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+            animation: fadeInUp 1s ease 1s both;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: var(--font-size-sm);
+            opacity: 0.9;
+        }
+
+        .hero-feature i {
+            color: var(--holla-orange);
+            font-size: var(--font-size-lg);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--light-gray);
+            color: var(--primary-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title {
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        /* Plans Section */
+        .plans {
+            background: var(--light-gray);
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .plan-card {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .plan-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--holla-orange), var(--holla-orange-dark));
+        }
+
+        .plan-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--holla-orange);
+        }
+
+        .plan-card.featured {
+            border-color: var(--holla-orange);
+            box-shadow: var(--shadow-md);
+            transform: scale(1.05);
+        }
+
+        .plan-card.featured::after {
+            content: 'MAIS POPULAR';
+            position: absolute;
+            top: 1rem;
+            right: -2rem;
+            background: var(--orange-accent);
+            color: var(--white);
+            padding: 0.25rem 3rem;
+            font-size: var(--font-size-xs);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transform: rotate(45deg);
+        }
+
+        .plan-name {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .plan-speed {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .plan-speed small {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .plan-price {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            color: var(--lime-green);
+            margin-bottom: 2rem;
+        }
+
+        .plan-price small {
+            font-size: var(--font-size-base);
+            color: var(--dark-gray);
+            font-weight: 400;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .plan-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--medium-gray);
+            font-size: var(--font-size-sm);
+        }
+
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+
+        .plan-features i {
+            color: var(--lime-green);
+            font-size: var(--font-size-base);
+            width: 20px;
+        }
+
+        .plan-cta {
+            width: 100%;
+            background: var(--lime-green);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            font-weight: 700;
+            font-size: var(--font-size-base);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-cta:hover {
+            background: var(--lime-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Company Section */
+        .company-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .company-text h2 {
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .company-text p {
+            font-size: var(--font-size-lg);
+            color: var(--dark-gray);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            border-left: 4px solid var(--lime-green);
+        }
+
+        .feature-card:hover {
+            background: var(--lime-green);
+            color: var(--white);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--lime-green);
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover i {
+            color: var(--white);
+        }
+
+        .feature-card h4 {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            font-size: var(--font-size-sm);
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        .company-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-blue), var(--lime-green));
+            border-radius: var(--border-radius-lg);
+            min-height: 400px;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .company-visual::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: rotate 20s linear infinite;
+        }
+
+        .company-visual i {
+            font-size: 8rem;
+            z-index: 2;
+            position: relative;
+        }
+
+        /* Coverage Section */
+        .coverage {
+            background: var(--light-gray);
+        }
+
+        .coverage-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .map-container {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 120px;
+        }
+
+        .map-embed {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: var(--border-radius);
+        }
+
+        .coverage-info h3 {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+        }
+
+        .coverage-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .coverage-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .coverage-list li:hover {
+            transform: translateX(8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .coverage-list i {
+            color: var(--lime-green);
+            font-size: var(--font-size-xl);
+            width: 24px;
+        }
+
+        /* News Section */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .news-card {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .news-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--lime-green));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+        }
+
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        .news-date {
+            font-size: var(--font-size-sm);
+            color: var(--dark-gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .news-title {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .news-excerpt {
+            font-size: var(--font-size-sm);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+            font-size: var(--font-size-sm);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--medium-gray);
+            border-radius: var(--border-radius);
+            font-family: inherit;
+            font-size: var(--font-size-base);
+            transition: var(--transition-fast);
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--lime-green);
+            box-shadow: 0 0 0 3px rgba(165, 197, 0, 0.1);
+        }
+
+        .contact-info {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 3rem;
+            border-radius: var(--border-radius-lg);
+        }
+
+        .contact-info h3 {
+            font-size: var(--font-size-2xl);
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-item i {
+            color: var(--lime-green);
+            font-size: var(--font-size-xl);
+            margin-top: 0.25rem;
+            width: 24px;
+        }
+
+        .contact-item-content h4 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item-content p {
+            opacity: 0.9;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .quick-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: var(--font-size-sm);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: var(--font-size-lg);
+            margin-bottom: 1.5rem;
+            color: var(--lime-green);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition-fast);
+            font-size: var(--font-size-sm);
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--lime-green);
+            padding-left: 0.5rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: var(--font-size-sm);
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            transition: var(--transition);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #128c7e;
+        }
+
+        .whatsapp-float::before {
+            content: 'Fale conosco!';
+            position: absolute;
+            right: 70px;
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: var(--font-size-sm);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: var(--transition);
+            pointer-events: none;
+        }
+
+        .whatsapp-float:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Scroll Animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .nav-container {
+                padding: 0 1.5rem;
+            }
+            
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Mobile Navigation */
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: var(--primary-blue);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                transform: translateY(-100vh);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .header-actions {
+                display: none;
+            }
+
+            /* Typography */
+            .hero-title {
+                font-size: var(--font-size-4xl);
+            }
+
+            .hero-subtitle {
+                font-size: var(--font-size-lg);
+            }
+
+            .section-title {
+                font-size: var(--font-size-3xl);
+            }
+
+            /* Layout */
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .company-content,
+            .coverage-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .plans-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .plan-card.featured {
+                transform: none;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-container {
+                position: static;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 1rem;
+                right: 1rem;
+                font-size: 1.2rem;
+            }
+
+            .whatsapp-float::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero-title {
+                font-size: var(--font-size-3xl);
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: var(--font-size-2xl);
+            }
+
+            .contact-form,
+            .contact-info {
+                padding: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .plan-speed {
+                font-size: 2.5rem;
+            }
+
+            .plan-price {
+                font-size: var(--font-size-2xl);
+            }
+        }
+
+        /* High contrast mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+                --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+                --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo"></div>
+            <p>Carregando...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="#home" class="logo-container">
+                <div class="logo-icon"></div>
+                Holla Telecom
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#empresa">Empresa</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#cobertura">Cobertura</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            
+            <div class="header-actions">
+                <a href="https://wktelecom.sgp.net.br/accounts/central/login" target="_blank" class="btn-header btn-outline-light">2ª Via</a>
+                <a href="https://wktelecom.sgp.net.br/accounts/central/login" target="_blank" class="btn-header btn-lime">Área do Cliente</a>
+                
+                <div class="social-links">
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5581996946144" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-bolt"></i>
+                    Internet de Alta Performance
+                </div>
+                
+                <h1 class="hero-title">Conectividade Superior em Água Preta</h1>
+                
+                <p class="hero-subtitle">
+                    Tecnologia 100% fibra óptica com velocidade real, suporte inteligente 24h e a segurança que você precisa para se conectar ao futuro.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="#planos" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Ver Planos
+                    </a>
+                    <a href="https://fast.com/" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Teste de Velocidade
+                    </a>
+                </div>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="fas fa-robot"></i>
+                        Suporte IA 24h
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        App Android
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-shield-alt"></i>
+                        Criptografia Avançada
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section class="section plans" id="planos">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-badge">
+                    <i class="fas fa-wifi"></i>
+                    Nossos Planos
+                </div>
+                <h2 class="section-title">Velocidade Real para Cada Necessidade</h2>
+                <p class="section-subtitle">
+                    Planos de internet fibra óptica com velocidade garantida, suporte 24h e preços que cabem no seu bolso. Todos os planos incluem Wi-Fi grátis e instalação sem custo.
+                </p>
+            </div>
+            
+            <div class="plans-grid">
+                <div class="plan-card scroll-reveal">
+                    <div class="plan-name">Básico</div>
+                    <div class="plan-speed">100<small>Mb</small></div>
+                    <div class="plan-price">R$ 59,90<small>/mês</small></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Download até 100 Mbps</li>
+                        <li><i class="fas fa-check"></i> Upload até 50 Mbps</li>
+                        <li><i class="fas fa-check"></i> Wi-Fi grátis</li>
+                        <li><i class="fas fa-check"></i> Instalação gratuita</li>
+                        <li><i class="fas fa-check"></i> Suporte 24h</li>
+                    </ul>
+                    <a href="https://wa.me/5581996946144?text=Olá! Tenho interesse no plano Básico 100Mb por R$ 59,90" class="plan-cta">CONTRATAR</a>
+                </div>
+                
+                <div class="plan-card scroll-reveal">
+                    <div class="plan-name">Padrão</div>
+                    <div class="plan-speed">200<small>Mb</small></div>
+                    <div class="plan-price">R$ 79,90<small>/mês</small></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Download até 200 Mbps</li>
+                        <li><i class="fas fa-check"></i> Upload até 100 Mbps</li>
+                        <li><i class="fas fa-check"></i> Wi-Fi grátis</li>
+                        <li><i class="fas fa-check"></i> Instalação gratuita</li>
+                        <li><i class="fas fa-check"></i> Suporte 24h</li>
+                    </ul>
+                    <a href="https://wa.me/5581996946144?text=Olá! Tenho interesse no plano Padrão 200Mb por R$ 79,90" class="plan-cta">CONTRATAR</a>
+                </div>
+                
+                <div class="plan-card featured scroll-reveal">
+                    <div class="plan-name">Premium</div>
+                    <div class="plan-speed">300<small>Mb</small></div>
+                    <div class="plan-price">R$ 99,90<small>/mês</small></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Download até 300 Mbps</li>
+                        <li><i class="fas fa-check"></i> Upload até 150 Mbps</li>
+                        <li><i class="fas fa-check"></i> Wi-Fi grátis</li>
+                        <li><i class="fas fa-check"></i> Instalação gratuita</li>
+                        <li><i class="fas fa-check"></i> Suporte prioritário 24h</li>
+                    </ul>
+                    <a href="https://wa.me/5581996946144?text=Olá! Tenho interesse no plano Premium 300Mb por R$ 99,90" class="plan-cta">CONTRATAR</a>
+                </div>
+                
+                <div class="plan-card scroll-reveal">
+                    <div class="plan-name">Ultra</div>
+                    <div class="plan-speed">400<small>Mb</small></div>
+                    <div class="plan-price">R$ 119,90<small>/mês</small></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Download até 400 Mbps</li>
+                        <li><i class="fas fa-check"></i> Upload até 200 Mbps</li>
+                        <li><i class="fas fa-check"></i> Wi-Fi grátis</li>
+                        <li><i class="fas fa-check"></i> Ideal para empresas</li>
+                        <li><i class="fas fa-check"></i> Suporte técnico especializado</li>
+                    </ul>
+                    <a href="https://wa.me/5581996946144?text=Olá! Tenho interesse no plano Ultra 400Mb por R$ 119,90" class="plan-cta">CONTRATAR</a>
+                </div>
+                
+                <div class="plan-card scroll-reveal">
+                    <div class="plan-name">Giga</div>
+                    <div class="plan-speed">1<small>Gb</small></div>
+                    <div class="plan-price">R$ 149,90<small>/mês</small></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Download até 1 Gbps</li>
+                        <li><i class="fas fa-check"></i> Upload até 500 Mbps</li>
+                        <li><i class="fas fa-check"></i> Wi-Fi 6 grátis</li>
+                        <li><i class="fas fa-check"></i> Máxima velocidade</li>
+                        <li><i class="fas fa-check"></i> Suporte VIP 24h</li>
+                    </ul>
+                    <a href="https://wa.me/5581996946144?text=Olá! Tenho interesse no plano Giga 1Gb por R$ 149,90" class="plan-cta">CONTRATAR</a>
+                </div>
+                
+                <div class="plan-card scroll-reveal">
+                    <div class="plan-name">Gamer</div>
+                    <div class="plan-speed">500<small>Mb</small></div>
+                    <div class="plan-price">R$ 179,90<small>/mês</small></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Download até 500 Mbps</li>
+                        <li><i class="fas fa-check"></i> Upload até 250 Mbps</li>
+                        <li><i class="fas fa-gamepad"></i> IP fixo incluído</li>
+                        <li><i class="fas fa-check"></i> Baixa latência</li>
+                        <li><i class="fas fa-check"></i> Otimizado para games</li>
+                    </ul>
+                    <a href="https://wa.me/5581996946144?text=Olá! Tenho interesse no plano Gamer 500Mb por R$ 179,90" class="plan-cta">CONTRATAR</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Section -->
+    <section class="section company" id="empresa">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-badge">
+                    <i class="fas fa-building"></i>
+                    Nossa Empresa
+                </div>
+                <h2 class="section-title">Por que escolher a Holla Telecom?</h2>
+                <p class="section-subtitle">
+                    Somos mais que um provedor de internet. Somos seu parceiro tecnológico em Água Preta, oferecendo conectividade de qualidade mundial com atendimento humanizado.
+                </p>
+            </div>
+            
+            <div class="company-content">
+                <div class="company-text scroll-reveal">
+                    <h2>Tecnologia que Conecta, Pessoas que Cuidam</h2>
+                    <p>
+                        A Holla Telecom nasceu com a missão de levar internet de qualidade para Água Preta e região. Nossa rede 100% fibra óptica garante velocidade real e estabilidade incomparável, enquanto nossa equipe especializada oferece suporte personalizado 24 horas por dia.
+                    </p>
+                    <p>
+                        Investimos constantemente em tecnologia de ponta, segurança avançada e inovação. Nosso aplicativo Android permite que você gerencie sua conta de forma simples, e nosso atendimento com IA GPT está sempre disponível para resolver suas dúvidas.
+                    </p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-robot"></i>
+                            <h4>Atendimento IA GPT 24h</h4>
+                            <p>Suporte inteligente sempre disponível para suas necessidades</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h4>App Android Gratuito</h4>
+                            <p>Gerencie sua conta direto do seu smartphone</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Segurança Avançada</h4>
+                            <p>Criptografia de dados de última geração</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-ethernet"></i>
+                            <h4>100% Fibra Óptica</h4>
+                            <p>Tecnologia superior com velocidade real garantida</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="company-visual scroll-reveal">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Section -->
+    <section class="section coverage" id="cobertura">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-badge">
+                    <i class="fas fa-map-marked-alt"></i>
+                    Área de Cobertura
+                </div>
+                <h2 class="section-title">Cobertura Completa em Água Preta</h2>
+                <p class="section-subtitle">
+                    Nossa rede de fibra óptica atende toda a cidade de Água Preta e região, levando internet de alta qualidade para residências e empresas.
+                </p>
+            </div>
+            
+            <div class="coverage-content">
+                <div class="coverage-info scroll-reveal">
+                    <h3>Regiões Atendidas</h3>
+                    <ul class="coverage-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Centro de Água Preta</strong>
+                                <p>Cobertura total com alta disponibilidade</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-home"></i>
+                            <div>
+                                <strong>Bairro Liberdade</strong>
+                                <p>Nossa sede e principal área de atendimento</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-building"></i>
+                            <div>
+                                <strong>Zona Comercial</strong>
+                                <p>Soluções corporativas e empresariais</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-mountain"></i>
+                            <div>
+                                <strong>Distritos Rurais</strong>
+                                <p>Expansão constante para áreas rurais</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="quick-actions">
+                        <a href="https://wa.me/5581996946144?text=Olá! Gostaria de verificar a disponibilidade na minha região" class="btn btn-primary btn-sm">Verificar Disponibilidade</a>
+                        <a href="#contato" class="btn btn-outline btn-sm">Solicitar Visita</a>
+                    </div>
+                </div>
+                
+                <div class="map-container scroll-reveal">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31616.84424956!2d-35.1866!3d-8.7089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98f0a8c8a8c8a8%3A0x8a8a8a8a8a8a8a8a!2s%C3%81gua%20Preta%2C%20PE!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                        class="map-embed"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="section" id="noticias">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-badge">
+                    <i class="fas fa-newspaper"></i>
+                    Notícias
+                </div>
+                <h2 class="section-title">Fique por Dentro das Novidades</h2>
+                <p class="section-subtitle">
+                    Acompanhe as últimas notícias sobre tecnologia, expansão de rede e melhorias em nossos serviços.
+                </p>
+            </div>
+            
+            <div class="news-grid">
+                <article class="news-card scroll-reveal">
+                    <div class="news-image">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">15 de Junho, 2025</div>
+                        <h3 class="news-title">Nova Expansão da Rede de Fibra Óptica</h3>
+                        <p class="news-excerpt">
+                            Ampliamos nossa cobertura para atender mais 500 residências na região do Liberdade, oferecendo internet de alta velocidade para ainda mais famílias.
+                        </p>
+                    </div>
+                </article>
+                
+                <article class="news-card scroll-reveal">
+                    <div class="news-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">10 de Junho, 2025</div>
+                        <h3 class="news-title">Novo App Android com Mais Funcionalidades</h3>
+                        <p class="news-excerpt">
+                            Lançamos a versão 2.0 do nosso aplicativo com novas funções: teste de velocidade integrado, chat com suporte IA e gestão completa da conta.
+                        </p>
+                    </div>
+                </article>
+                
+                <article class="news-card scroll-reveal">
+                    <div class="news-image">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">5 de Junho, 2025</div>
+                        <h3 class="news-title">Investimento em Segurança Cibernética</h3>
+                        <p class="news-excerpt">
+                            Implementamos novos protocolos de segurança e criptografia avançada para proteger os dados de nossos clientes com tecnologia de ponta.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contato">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-badge">
+                    <i class="fas fa-headset"></i>
+                    Contato
+                </div>
+                <h2 class="section-title">Fale Conosco</h2>
+                <p class="section-subtitle">
+                    Nossa equipe está pronta para atendê-lo. Entre em contato e descubra como podemos melhorar sua conectividade.
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <form class="contact-form scroll-reveal" id="contactForm">
+                    <h3 style="margin-bottom: 2rem; color: var(--primary-blue);">Envie sua Mensagem</h3>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName">Nome</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Sobrenome</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Como podemos ajudá-lo?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Mensagem
+                    </button>
+                    
+                    <p style="text-align: center; margin-top: 1rem; font-size: var(--font-size-sm); color: var(--dark-gray);">
+                        <i class="fas fa-clock"></i> Responderemos em até 2 horas durante horário comercial
+                    </p>
+                </form>
+                
+                <div class="contact-info scroll-reveal">
+                    <h3>Informações de Contato</h3>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-item-content">
+                            <h4>Endereço</h4>
+                            <p>Rua Manoel Carlos, nº 87<br>Liberdade - Água Preta - PE</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-item-content">
+                            <h4>Telefone/WhatsApp</h4>
+                            <p>(81) 99694-6144</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-item-content">
+                            <h4>E-mail</h4>
+                            <p>suporte@hollatelecom.com.br</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-item-content">
+                            <h4>Horário de Atendimento</h4>
+                            <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h<br><span style="color: var(--lime-green); font-weight: 600;">Suporte técnico 24h</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-actions">
+                        <a href="https://wktelecom.sgp.net.br/accounts/central/login" target="_blank" class="btn btn-outline btn-sm">Central do Cliente</a>
+                        <a href="https://fast.com/" target="_blank" class="btn btn-outline btn-sm">Teste de Velocidade</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon"></div>
+                        Holla Telecom
+                    </div>
+                    <p style="margin-bottom: 1.5rem; opacity: 0.8;">
+                        Conectando você ao mundo com segurança e qualidade. Presente em cada momento da sua vida digital.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5581996946144" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#empresa">Nossa Empresa</a></li>
+                        <li><a href="#planos">Planos de Internet</a></li>
+                        <li><a href="#cobertura">Área de Cobertura</a></li>
+                        <li><a href="#noticias">Notícias</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Serviços Online</h3>
+                    <ul>
+                        <li><a href="https://wktelecom.sgp.net.br/accounts/central/login" target="_blank">Central do Cliente</a></li>
+                        <li><a href="https://wktelecom.sgp.net.br/accounts/central/login" target="_blank">2ª Via de Boleto</a></li>
+                        <li><a href="https://fast.com/" target="_blank">Teste de Velocidade</a></li>
+                        <li><a href="https://wa.me/5581996946144" target="_blank">Suporte WhatsApp</a></li>
+                        <li><a href="#">App Android</a></li>
+                        <li><a href="#">Suporte Técnico</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Rua Manoel Carlos, 87<br>Liberdade - Água Preta - PE</li>
+                        <li><i class="fas fa-phone"></i> (81) 99694-6144</li>
+                        <li><i class="fas fa-envelope"></i> suporte@hollatelecom.com.br</li>
+                        <li><i class="fas fa-globe"></i> www.hollatelecom.com.br</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2025</span> Holla Telecom. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ❤️ para conectar pessoas • <a href="#" style="color: var(--lime-green);">Política de Privacidade</a> • <a href="#" style="color: var(--lime-green);">Termos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5581996946144?text=Olá! Vim pelo site e gostaria de mais informações sobre os planos da Holla Telecom." 
+       class="whatsapp-float" 
+       target="_blank" 
+       aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Page Loader
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('pageLoader');
+            setTimeout(() => {
+                loader.classList.add('loaded');
+            }, 1000);
+        });
+
+        // Current Year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Navigation
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = mobileToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Header Scroll Effect
+        let lastScrollY = window.scrollY;
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                
+                if (target) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll reveal elements
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const firstName = formData.get('firstName');
+            const lastName = formData.get('lastName');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const message = formData.get('message');
+            
+            // Create WhatsApp message
+            const whatsappMessage = encodeURIComponent(
+                `*Nova mensagem do site Holla Telecom:*\n\n` +
+                `*Nome:* ${firstName} ${lastName}\n` +
+                `*Email:* ${email}\n` +
+                `*Telefone:* ${phone}\n` +
+                `*Mensagem:* ${message}`
+            );
+            
+            // Open WhatsApp
+            window.open(`https://wa.me/5581996946144?text=${whatsappMessage}`, '_blank');
+            
+            // Show success message
+            alert('✅ Mensagem enviada! Você será redirecionado para o WhatsApp para finalizar o contato.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Plan Cards Enhanced Interactions
+        document.querySelectorAll('.plan-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                if (!card.classList.contains('featured')) {
+                    card.style.transform = 'translateY(-12px) scale(1.02)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                if (!card.classList.contains('featured')) {
+                    card.style.transform = 'translateY(0) scale(1)';
+                }
+            });
+        });
+
+        // Feature Cards Interactions
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Lazy Loading for Images (if any)
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Performance Optimization
+        let ticking = false;
+
+        function updateScrollAnimations() {
+            // Only run animations if user hasn't requested reduced motion
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                // Add scroll-based animations here if needed
+            }
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollAnimations);
+                ticking = true;
+            }
+        });
+
+        // Accessibility Improvements
+        document.addEventListener('keydown', (e) => {
+            // ESC key closes mobile menu
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                const icon = mobileToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Focus management for mobile menu
+        mobileToggle.addEventListener('focus', () => {
+            mobileToggle.style.outline = '2px solid var(--lime-green)';
+        });
+
+        mobileToggle.addEventListener('blur', () => {
+            mobileToggle.style.outline = 'none';
+        });
+
+        // Analytics Events (ready for integration)
+        function trackEvent(eventName, eventData = {}) {
+            // Google Analytics 4 or other analytics integration
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, eventData);
+            }
+            
+            // Facebook Pixel integration
+            if (typeof fbq !== 'undefined') {
+                fbq('track', eventName, eventData);
+            }
+        }
+
+        // Track plan clicks
+        document.querySelectorAll('.plan-cta').forEach(button => {
+            button.addEventListener('click', () => {
+                const planCard = button.closest('.plan-card');
+                const planName = planCard.querySelector('.plan-name').textContent;
+                const planPrice = planCard.querySelector('.plan-price').textContent;
+                
+                trackEvent('plan_click', {
+                    plan_name: planName,
+                    plan_price: planPrice
+                });
+            });
+        });
+
+        // Track WhatsApp clicks
+        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+            link.addEventListener('click', () => {
+                trackEvent('whatsapp_click', {
+                    source: link.closest('section')?.id || 'unknown'
+                });
+            });
+        });
+
+        // Error Handling
+        window.addEventListener('error', (e) => {
+            console.error('JavaScript Error:', e.error);
+            // Could send to error tracking service
+        });
+
+        // Service Worker Registration (for PWA capabilities)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                // navigator.serviceWorker.register('/sw.js');
+            });
+        }
+
+        // Console Welcome Message
+        console.log('%c🚀 Holla Telecom', 'color: #a5c500; font-size: 24px; font-weight: bold;');
+        console.log('%cSite desenvolvido com as melhores práticas de performance e acessibilidade.', 'color: #1c3556; font-size: 14px;');
+        console.log('%cPara suporte técnico: (81) 99694-6144', 'color: #6c757d; font-size: 12px;');
+    </script>
+
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Holla Telecom",
+        "description": "Provedor de internet fibra óptica em Água Preta, PE. Planos de alta velocidade com suporte 24h.",
+        "url": "https://www.hollatelecom.com.br",
+        "telephone": "+5581996946144",
+        "email": "suporte@hollatelecom.com.br",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Manoel Carlos, 87",
+            "addressLocality": "Água Preta",
+            "addressRegion": "PE",
+            "postalCode": "55400-000",
+            "addressCountry": "BR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -8.7089,
+            "longitude": -35.1866
+        },
+        "openingHours": [
+            "Mo-Fr 08:00-18:00",
+            "Sa 08:00-12:00"
+        ],
+        "priceRange": "R$ 59,90 - R$ 179,90",
+        "serviceArea": {
+            "@type": "City",
+            "name": "Água Preta, PE"
+        },
+        "sameAs": [
+            "https://www.facebook.com/hollatelecom",
+            "https://www.instagram.com/hollatelecom"
+        ]
+    }
+    </script>
+</body>
+</html>
