@@ -257,18 +257,16 @@
             border: 0;
         }
         
-        /* CSS personalizado para o Botpress Webchat (mantido e melhorado) */
-        /* Para garantir que o chat apareça sobre outros elementos */
+        /* ============== INÍCIO: CSS CUSTOMIZADO PARA O BOTPRESS ============== */
+        
+        /* Garante que o widget do chat fique sobre todos os outros elementos */
         #bp-widget {
             z-index: 9999 !important;
         }
-        
-        /* Animação de pulso para o botão do chat (removido para evitar conflitos) */
-        /* Removido o keyframe pulse para evitar sobreposição */
-        
+
         /* Botão do chat com cores da Holla Telecom */
         .bpw-widget-btn {
-            background-color: #FF7A00 !important;
+            background-color: #FF7A00 !important; /* Laranja Holla Telecom */
             border: none !important;
             box-shadow: 0 4px 20px rgba(255, 122, 0, 0.3) !important;
         }
@@ -278,10 +276,20 @@
             transform: scale(1.05) !important;
             transition: all 0.3s ease !important;
         }
-        
+
+        /* Animação de pulso para o botão do chat */
+        @keyframes pulse-holla {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .bpw-widget-btn {
+            animation: pulse-holla 2s infinite;
+        }
+
         /* Header do chat com personalização completa */
         .bpw-header {
-            background-color: #001B3A !important;
+            background-color: #001B3A !important; /* Azul Holla Telecom */
             background: linear-gradient(135deg, #001B3A 0%, #003366 100%) !important;
         }
         
@@ -292,7 +300,7 @@
         
         /* Avatar personalizado do bot */
         .bpw-bot-avatar {
-            background-color: #FF7A00 !important;
+            background-color: #FF7A00 !important; /* Laranja Holla Telecom */
             background-image: url('images/juninho-avatar.jpg') !important;
             background-size: cover !important;
             background-position: center !important;
@@ -300,7 +308,7 @@
         
         /* Nome do bot personalizado */
         .bpw-bot-name {
-            color: #001B3A !important;
+            color: #FFFFFF !important; /* Cor do nome do bot no header */
             font-weight: bold !important;
         }
         
@@ -313,18 +321,39 @@
         .bpw-send-button:hover {
             background-color: #E66C00 !important;
         }
-        
-        /* Mensagens do usuário */
+
+        /* Balões de conversa do bot e do usuário */
         .bpw-from-user .bpw-chat-bubble {
-            background-color: #FF7A00 !important;
-            color: white !important;
+            background-color: #001B3A !important; /* Azul escuro para as mensagens do usuário */
+            color: #FFFFFF !important;
+            /* Adiciona borda arredondada para o balão do usuário */
+            border-radius: 20px 20px 5px 20px !important; 
         }
         
-        /* Mensagens do bot */
         .bpw-from-bot .bpw-chat-bubble {
-            background-color: #f8f9fa !important;
+            background-color: #f8f9fa !important; /* Cinza claro para as mensagens do bot */
             color: #001B3A !important;
             border: 1px solid #e9ecef !important;
+            /* Adiciona borda arredondada para o balão do bot */
+            border-radius: 20px 20px 20px 5px !important;
+        }
+        
+        /* Botões de resposta rápida (Quick Replies) */
+        .bpw-quick-reply-button {
+            background-color: #001B3A !important; /* Cor de fundo do botão para azul */
+            color: #FFFFFF !important;
+            border-radius: 25px !important; /* Mais arredondado */
+            border: 2px solid #001B3A !important;
+            padding: 10px 20px !important;
+            transition: all 0.3s ease !important;
+            font-weight: 600 !important;
+        }
+
+        .bpw-quick-reply-button:hover {
+            background-color: #FF7A00 !important; /* Cor de hover para laranja */
+            color: #001B3A !important;
+            border-color: #FF7A00 !important;
+            transform: translateY(-2px); /* Efeito sutil no hover */
         }
         
         /* Input de texto */
@@ -349,6 +378,7 @@
                 max-height: 70vh !important;
             }
         }
+        /* ============== FIM: CSS CUSTOMIZADO PARA O BOTPRESS ============== */
     </style>
 
     <script type="application/ld+json">
