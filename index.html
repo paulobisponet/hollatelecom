@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Holla Telecom - Internet Fibra Óptica em Água Preta, | Planos a partir de R$ 55</title>
+    <title>Holla Telecom - Internet Fibra Óptica em Água Preta, Palmares e Região | Planos a partir de R$ 55</title>
     <meta name="description" content="Internet fibra óptica de alta velocidade em Água Preta, Ribeirão, Palmares e Tamandaré. Planos a partir de R$ 55/mês com instalação grátis. SLA 99,9% uptime e suporte 24h.">
-    <meta name="keywords" content="internet fibra óptica, Água Preta, internet rápida, provedor internet PE">
+    <meta name="keywords" content="internet fibra óptica, Água Preta, Palmares, Ribeirão, Tamandaré, internet rápida, provedor internet PE">
     <meta name="author" content="Holla Telecom">
     <meta name="robots" content="index, follow">
     
@@ -946,9 +946,218 @@
         });
     </script>
 
-    <!-- Chatbot Botpress -->
-    <script src="https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/10/20250628103157-6APT9GJU.json" defer></script>
+    <!-- Chatbot Botpress - Código Oficial -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/06/28/10/20250628103157-A3QWJHP.js"></script>
+
+    <!-- CSS personalizado para o webchat da Holla Telecom -->
+    <style>
+        /* Personalização do Botpress Webchat */
+        #bp-widget {
+            z-index: 9999 !important;
+        }
+        
+        /* Botão do chat com cores da Holla Telecom */
+        .bpw-widget-btn {
+            background-color: #FF7A00 !important;
+            border: none !important;
+            box-shadow: 0 4px 20px rgba(255, 122, 0, 0.3) !important;
+        }
+        
+        .bpw-widget-btn:hover {
+            background-color: #E66C00 !important;
+            transform: scale(1.05) !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        /* Header do chat */
+        .bpw-header {
+            background-color: #001B3A !important;
+            background: linear-gradient(135deg, #001B3A 0%, #003366 100%) !important;
+        }
+        
+        .bpw-header-title {
+            color: #FFFFFF !important;
+            font-weight: bold !important;
+        }
+        
+        /* Botão de enviar mensagem */
+        .bpw-send-button {
+            background-color: #FF7A00 !important;
+            border: none !important;
+        }
+        
+        .bpw-send-button:hover {
+            background-color: #E66C00 !important;
+        }
+        
+        /* Avatar do bot */
+        .bpw-bot-avatar {
+            background-color: #FF7A00 !important;
+        }
+        
+        /* Container do chat */
+        .bpw-chat-container {
+            font-family: 'Inter', 'Poppins', sans-serif !important;
+        }
+        
+        /* Layout do webchat */
+        .bpw-layout {
+            border-radius: 10px !important;
+            overflow: hidden !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        /* Links dentro das mensagens */
+        .bpw-chat-bubble a {
+            color: #FF7A00 !important;
+            font-weight: bold !important;
+        }
+        
+        .bpw-chat-bubble a:hover {
+            color: #E66C00 !important;
+        }
+        
+        /* Input de texto */
+        .bpw-composer-inner {
+            border: 2px solid #f0f0f0 !important;
+            border-radius: 25px !important;
+        }
+        
+        .bpw-composer-inner:focus-within {
+            border-color: #FF7A00 !important;
+        }
+        
+        /* Mensagens do usuário */
+        .bpw-from-user .bpw-chat-bubble {
+            background-color: #FF7A00 !important;
+            color: white !important;
+        }
+        
+        /* Mensagens do bot */
+        .bpw-from-bot .bpw-chat-bubble {
+            background-color: #f8f9fa !important;
+            color: #001B3A !important;
+            border: 1px solid #e9ecef !important;
+        }
+        
+        /* Esconder "powered by" se necessário */
+        .bpw-powered {
+            opacity: 0.7 !important;
+            font-size: 11px !important;
+        }
+        
+        /* Animação do botão flutuante */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .bpw-widget-btn {
+            animation: pulse 2s infinite !important;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .bpw-layout {
+                max-height: 70vh !important;
+            }
+        }
+    </style>
+
+    <!-- Script para inicialização e personalização adicional -->
+    <script>
+        // Aguardar o webchat carregar completamente
+        window.addEventListener('load', function() {
+            // Verificar se o Botpress carregou
+            const checkBotpress = setInterval(function() {
+                if (window.botpressWebChat) {
+                    console.log('✅ Botpress Webchat carregado com sucesso!');
+                    
+                    // Personalização adicional após carregamento
+                    setTimeout(function() {
+                        const chatWidget = document.querySelector('#bp-widget');
+                        if (chatWidget) {
+                            console.log('✅ Widget do chat encontrado e personalizado!');
+                            
+                            // Aplicar z-index alto
+                            chatWidget.style.zIndex = '9999';
+                            
+                            // Adicionar title ao botão para acessibilidade
+                            const chatButton = document.querySelector('.bpw-widget-btn');
+                            if (chatButton) {
+                                chatButton.setAttribute('title', 'Conversar com Juninho - Assistente da Holla Telecom');
+                                chatButton.setAttribute('aria-label', 'Abrir chat com assistente virtual');
+                            }
+                        }
+                    }, 2000);
+                    
+                    clearInterval(checkBotpress);
+                }
+            }, 1000);
+            
+            // Timeout para fallback se não carregar em 15 segundos
+            setTimeout(function() {
+                if (!window.botpressWebChat || !document.querySelector('#bp-widget')) {
+                    console.log('⚠️ Webchat não carregou, criando fallback...');
+                    createFallbackWidget();
+                }
+            }, 15000);
+        });
+
+        // Widget de fallback em caso de falha
+        function createFallbackWidget() {
+            const fallbackWidget = document.createElement('div');
+            fallbackWidget.innerHTML = `
+                <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+                    <div id="fallback-chat-btn" style="width: 60px; height: 60px; background: #FF7A00; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 20px rgba(255, 122, 0, 0.3); display: flex; align-items: center; justify-content: center; transition: all 0.3s; animation: pulse 2s infinite;">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+                            <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4v3c0 .6.4 1 1 1 .2 0 .5-.1.7-.3L14.4 18H20c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/>
+                        </svg>
+                    </div>
+                    <div id="fallback-chat-window" style="position: absolute; bottom: 70px; right: 0; width: 300px; background: white; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: none; overflow: hidden;">
+                        <div style="background: #001B3A; color: white; padding: 15px; text-align: center;">
+                            <strong>Juninho - Holla Telecom</strong>
+                        </div>
+                        <div style="padding: 20px; text-align: center;">
+                            <div style="margin-bottom: 15px;">
+                                <img src="images/juninho-avatar.jpg" alt="Juninho" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'">
+                            </div>
+                            <p style="margin: 0 0 15px 0; color: #001B3A;">Olá! Sou o Juninho, assistente da Holla Telecom.</p>
+                            <a href="https://wa.me/5581996946144?text=Olá! Gostaria de falar com o Juninho sobre os planos da Holla Telecom." 
+                               target="_blank"
+                               style="background: #FF7A00; color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block; transition: background 0.3s;"
+                               onmouseover="this.style.background='#E66C00'"
+                               onmouseout="this.style.background='#FF7A00'">
+                               💬 Conversar no WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(fallbackWidget);
+            
+            // Eventos do fallback
+            document.getElementById('fallback-chat-btn').addEventListener('click', function() {
+                const window = document.getElementById('fallback-chat-window');
+                window.style.display = window.style.display === 'none' ? 'block' : 'none';
+            });
+            
+            // Hover effect
+            const btn = document.getElementById('fallback-chat-btn');
+            btn.addEventListener('mouseenter', function() {
+                this.style.background = '#E66C00';
+                this.style.transform = 'scale(1.1)';
+            });
+            btn.addEventListener('mouseleave', function() {
+                this.style.background = '#FF7A00';
+                this.style.transform = 'scale(1)';
+            });
+        }
+    </script>
 
 </body>
 </html>
-                        
+                                
