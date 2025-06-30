@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holla Telecom - Presente em cada momento</title>
-    <!-- Inclui o Tailwind CSS para estilização rápida e responsiva -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
     <style>
         body {
@@ -216,25 +214,19 @@
 </head>
 <body class="text-gray-800">
 
-    <!-- Cabeçalho Principal -->
     <header class="bg-white shadow-md p-4 sticky top-0 z-50">
         <nav class="container mx-auto flex justify-between items-center flex-wrap">
-            <!-- Logotipo da Holla Telecom -->
             <div class="flex flex-col items-start flex-shrink-0 text-white mr-6 header-logo-container">
                 <a href="#" class="flex items-center">
-                    <!-- Logo agora aponta para images/logo.png -->
                     <img src="images/logo.png" alt="Holla Telecom Logo">
                 </a>
-                <!-- Slogan agora com texto um pouco maior (text-base) -->
                 <span class="logo-slogan">Presente em cada momento</span>
             </div>
-            <!-- Botão de menu para mobile -->
             <div class="block lg:hidden">
                 <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-holla-blue border-holla-blue hover:text-holla-orange hover:border-holla-orange">
                     <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-15z"/></svg>
                 </button>
             </div>
-            <!-- Links de Navegação -->
             <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden" id="nav-content">
                 <div class="text-sm lg:flex-grow">
                     <a href="#home" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-holla-orange mr-4 transition duration-300">Home</a>
@@ -255,10 +247,8 @@
         </nav>
     </header>
 
-    <!-- Seção Hero - Banner Principal -->
     <section id="home" class="hero-section text-white py-20 px-4 md:py-32 flex items-center justify-center">
         <div class="container mx-auto text-center lg:text-left flex flex-col lg:flex-row items-center justify-between relative z-20">
-            <!-- Conteúdo de texto à esquerda -->
             <div class="lg:w-1/2 mb-12 lg:mb-0">
                 <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
                     Holla Telecom: Conexão Ultrarrápida para Você!
@@ -271,34 +261,27 @@
                 </a>
             </div>
 
-            <!-- Avatar e Elementos Flutuantes à direita (dentro da seção hero, como antes) -->
             <div class="lg:w-1/2 relative h-96 hidden lg:block">
-                <!-- Avatar do Juninho -->
                 <a href="https://wa.me/5581996946144?text=Olá! Gostaria de falar com o Chatbot Juninho." target="_blank" class="floating-element juninho-avatar" style="top: 50%; right: 15%; transform: translateY(-50%) translateX(0px);">
                     <img src="images/juninho-avatar.jpg" alt="Avatar do Chatbot Juninho">
                 </a>
 
-                <!-- Cartão Flutuante 1 -->
                 <div class="floating-element floating-card floating-card-1" style="top: 20%; right: 5%;">
                     <h4 class="flex items-center"><svg class="w-5 h-5 mr-2 text-holla-orange" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM8.707 9.293a1 1 0 00-1.414 1.414L9.586 12l-2.293 2.293a1 1 0 001.414 1.414L11 13.414l2.293 2.293a1 1 0 001.414-1.414L12.414 12l2.293-2.293a1 1 0 00-1.414-1.414L11 10.586l-2.293-2.293z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Chatbot Juninho</h4>
                     <p>Suporte e vendas 24h com IA.</p>
                 </div>
 
-                <!-- Cartão Flutuante 2 -->
                 <div class="floating-element floating-card floating-card-2" style="bottom: 10%; right: 10%;">
                     <h4 class="flex items-center"><svg class="w-5 h-5 mr-2 text-holla-orange" fill="currentColor" viewBox="0 0 20 20"><path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm1.464 2.207l3.646 3.646a1 1 0 001.414 0l3.646-3.646a1 1 0 00-1.414-1.414L10 8.586 6.828 5.414a1 1 0 00-1.414 1.414z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>SLA 99.9% Uptime</h4>
                     <p>Conexão estável e sem interrupções.</p>
                 </div>
 
-                <!-- Cartão Flutuante 3 -->
                 <div class="floating-element floating-card floating-card-3" style="top: 60%; left: 10%;">
                     <h4 class="flex items-center"><svg class="w-5 h-5 mr-2 text-holla-orange" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm-3.707-9.293a1 1 0 00-1.414 1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Rede Própria</h4>
                     <p>Mais de 10km de fibra óptica dedicada.</p>
                 </div>
             </div>
-            <!-- Elementos flutuantes para mobile (posicionamento dentro do fluxo) -->
             <div class="lg:hidden flex flex-col items-center mt-8">
-                <!-- Avatar do Juninho para mobile -->
                 <a href="https://wa.me/5581996946144?text=Olá! Gostaria de falar com o Chatbot Juninho." target="_blank" class="juninho-avatar">
                     <img src="images/juninho-avatar.jpg" alt="Avatar do Chatbot Juninho">
                 </a>
@@ -318,12 +301,10 @@
         </div>
     </section>
 
-    <!-- Seção "Por Que Escolher a Holla Telecom" -->
     <section id="diferenciais" class="py-16 px-4 bg-gray-100">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-holla-blue mb-12">Por que escolher a Holla Telecom?</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Item 1: Fibra Óptica -->
                 <div class="bg-white rounded-lg shadow-md p-8 transform hover:scale-105 transition duration-300">
                     <div class="flex items-center justify-center mb-4">
                         <svg class="h-12 w-12 text-holla-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0zM10 7v5l4 2"></path></svg>
@@ -331,7 +312,6 @@
                     <h3 class="text-xl font-semibold mb-4 text-holla-blue">Rede 100% Fibra Óptica</h3>
                     <p class="text-gray-600">Com mais de 10 km de rede própria e enlaces criptografados para sua segurança.</p>
                 </div>
-                <!-- Item 2: Velocidade e Tecnologia -->
                 <div class="bg-white rounded-lg shadow-md p-8 transform hover:scale-105 transition duration-300">
                     <div class="flex items-center justify-center mb-4">
                         <svg class="h-12 w-12 text-holla-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
@@ -339,7 +319,6 @@
                     <h3 class="text-xl font-semibold mb-4 text-holla-blue">Tecnologia de Ponta</h3>
                     <p class="text-gray-600">Núcleo Huawei NE8000 e OLTs Huawei 5687T redundantes para máxima performance.</p>
                 </div>
-                <!-- Item 3: Suporte e Estabilidade -->
                 <div class="bg-white rounded-lg shadow-md p-8 transform hover:scale-105 transition duration-300">
                     <div class="flex items-center justify-center mb-4">
                         <svg class="h-12 w-12 text-holla-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 0a1.693 1.693 0 010 2.262v0a1.693 1.693 0 01-2.262 0c-.573-.573-1.182-1.077-1.782-1.442C8.384 9.176 7 8 7 8m0 0c-1.464 1.464-2.88 2.914-4.225 4.148L2 14h2"></path></svg>
@@ -351,12 +330,10 @@
         </div>
     </section>
 
-    <!-- Seção de Planos -->
     <section id="planos" class="py-16 px-4 bg-white">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-holla-blue mb-12">Nossos Planos de Internet Fibra</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Plano Família – 100 Mb -->
                 <div class="bg-gray-100 rounded-lg shadow-lg p-8 flex flex-col justify-between transform hover:scale-105 transition duration-300 border-2 border-transparent hover:border-holla-orange">
                     <div>
                         <h3 class="text-2xl font-bold text-holla-blue mb-4">Plano Família</h3>
@@ -371,12 +348,10 @@
                             <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Fidelidade 12 Meses</li>
                         </ul>
                     </div>
-                    <!-- Botão Plano Família - Redireciona para WhatsApp -->
                     <a href="https://wa.me/5581996946144?text=Olá! Tenho interesse no Plano Família (100 Mega)." target="_blank" class="w-full bg-holla-orange hover:bg-holla-orange-dark text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-md flex items-center justify-center">
                         Contratar
                     </a>
                 </div>
-                <!-- Plano Gamer – 200 Mb (Destaque) -->
                 <div class="bg-holla-blue text-white rounded-lg shadow-lg p-8 flex flex-col justify-between transform scale-105 hover:scale-110 transition duration-300 border-4 border-holla-orange">
                     <div>
                         <h3 class="text-2xl font-bold mb-4">Plano Gamer <span class="bg-holla-orange text-holla-blue text-xs font-semibold px-2 py-1 rounded-full ml-2">MAIS RECOMENDADO</span></h3>
@@ -391,12 +366,10 @@
                             <li class="flex items-center"><svg class="h-5 w-5 text-holla-orange mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Fidelidade 12 Meses</li>
                         </ul>
                     </div>
-                    <!-- Botão Plano Gamer - Redireciona para WhatsApp -->
                     <a href="https://wa.me/5581996946144?text=Olá! Tenho interesse no Plano Gamer (200 Mega)." target="_blank" class="w-full bg-holla-orange hover:bg-holla-orange-dark text-holla-blue font-bold py-3 px-6 rounded-full transition duration-300 shadow-md flex items-center justify-center">
                         Contratar Agora
                     </a>
                 </div>
-                <!-- Plano Empresarial – 300 Mb -->
                 <div class="bg-gray-100 rounded-lg shadow-lg p-8 flex flex-col justify-between transform hover:scale-105 transition duration-300 border-2 border-transparent hover:border-holla-orange">
                     <div>
                         <h3 class="text-2xl font-bold text-holla-blue mb-4">Plano Empresarial</h3>
@@ -411,7 +384,6 @@
                             <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Fidelidade 12 Meses</li>
                         </ul>
                     </div>
-                    <!-- Botão Plano Empresarial - Redireciona para WhatsApp -->
                     <a href="https://wa.me/5581996946144?text=Olá! Tenho interesse no Plano Empresarial (300 Mega)." target="_blank" class="w-full bg-holla-orange hover:bg-holla-orange-dark text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-md flex items-center justify-center">
                         Contratar
                     </a>
@@ -420,7 +392,6 @@
         </div>
     </section>
 
-    <!-- Seção de Verificação de Cobertura -->
     <section id="cobertura" class="py-16 px-4 bg-gradient-to-r from-holla-blue to-blue-900 text-white">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-8">Verifique a Cobertura na Sua Região</h2>
@@ -435,7 +406,6 @@
         </div>
     </section>
 
-    <!-- Seção Sobre Nós -->
     <section id="sobre" class="py-16 px-4 bg-white">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-holla-blue mb-8">Sobre a Holla Telecom</h2>
@@ -465,18 +435,15 @@
         </div>
     </section>
 
-    <!-- Seção de Depoimentos -->
     <section id="depoimentos" class="py-16 px-4 bg-gray-100">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-holla-blue mb-12">O que nossos clientes dizem</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Depoimento 1 -->
                 <div class="bg-white rounded-lg shadow-md p-8 transform hover:scale-105 transition duration-300">
                     <p class="text-lg italic text-gray-700 mb-6">"A Holla Telecom transformou minha experiência com a internet! Conexão rápida e estável para tudo que preciso."</p>
                     <p class="font-semibold text-holla-blue">- Maria Silva</p>
                     <p class="text-gray-500 text-sm">Cliente há 2 anos</p>
                 </div>
-                <!-- Depoimento 2 -->
                 <div class="bg-white rounded-lg shadow-md p-8 transform hover:scale-105 transition duration-300">
                     <p class="text-lg italic text-gray-700 mb-6">"O suporte técnico é impecável. Sempre que precisei, fui atendido rapidamente e com muita eficiência."</p>
                     <p class="font-semibold text-holla-blue">- João Santos</p>
@@ -486,12 +453,10 @@
         </div>
     </section>
 
-    <!-- Seção de FAQ (Perguntas Frequentes) -->
     <section id="faq" class="py-16 px-4 bg-white">
         <div class="container mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-holla-blue mb-12 text-center">Perguntas Frequentes (FAQ)</h2>
             <div class="max-w-3xl mx-auto">
-                <!-- FAQ Item 1 -->
                 <div class="bg-gray-100 rounded-lg shadow-md mb-4 p-6 faq-item">
                     <label for="faq1" class="flex justify-between items-center cursor-pointer text-xl font-semibold text-gray-800">
                         Qual a diferença entre fibra óptica e outras tecnologias?
@@ -510,7 +475,6 @@
                         Em comparação com tecnologias antigas (ADSL, cabo coaxial), a fibra oferece uma experiência muito mais fluida e confiável.</p>
                     </div>
                 </div>
-                <!-- FAQ Item 2 -->
                 <div class="bg-gray-100 rounded-lg shadow-md mb-4 p-6 faq-item">
                     <label for="faq2" class="flex justify-between items-center cursor-pointer text-xl font-semibold text-gray-800">
                         Preciso comprar algum equipamento para ter internet da Holla Telecom?
@@ -523,7 +487,6 @@
                         <p>Não, você não precisa se preocupar com a compra de equipamentos! A Holla Telecom fornece o modem e o roteador Wi-Fi 6 de última geração, garantindo que você tenha a melhor experiência possível. A instalação também é totalmente gratuita para todos os nossos planos. Nosso objetivo é simplificar a sua conexão!</p>
                     </div>
                 </div>
-                <!-- FAQ Item 3 -->
                 <div class="bg-gray-100 rounded-lg shadow-md mb-4 p-6 faq-item">
                     <label for="faq3" class="flex justify-between items-center cursor-pointer text-xl font-semibold text-gray-800">
                         Como funciona o suporte técnico da Holla Telecom e o Chatbot Juninho?
@@ -541,7 +504,6 @@
                         Nosso monitoramento de rede é 24h e garantimos um SLA de 99,9% de uptime (tempo de funcionamento).</p>
                     </div>
                 </div>
-                <!-- FAQ Item 4 -->
                 <div class="bg-gray-100 rounded-lg shadow-md mb-4 p-6 faq-item">
                     <label for="faq4" class="flex justify-between items-center cursor-pointer text-xl font-semibold text-gray-800">
                         Quais cidades e regiões a Holla Telecom atende?
@@ -561,7 +523,6 @@
                         Para verificar a disponibilidade exata no seu endereço, utilize o "Módulo de busca de CEP" disponível nesta página principal.</p>
                     </div>
                 </div>
-                <!-- FAQ Item 5 -->
                 <div class="bg-gray-100 rounded-lg shadow-md mb-4 p-6 faq-item">
                     <label for="faq5" class="flex justify-between items-center cursor-pointer text-xl font-semibold text-gray-800">
                         Quais as funcionalidades do aplicativo Holla Telecom?
@@ -586,7 +547,6 @@
         </div>
     </section>
 
-    <!-- Seção de Contato -->
     <section id="contato" class="py-16 px-4 bg-gray-200">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-holla-blue mb-8">Entre em Contato</h2>
@@ -614,7 +574,6 @@
                     </button>
                 </form>
             </div>
-            <!-- Canais diretos de contato -->
             <div class="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-8 md:space-y-0 mt-12">
                 <a href="https://wa.me/5581996946144" target="_blank" class="flex flex-col items-center p-6 bg-green-500 text-white rounded-lg shadow-lg transform hover:scale-105 transition duration-300 w-full md:w-1/4">
                     <svg class="h-16 w-16 mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.557-3.842-1.557-5.891 0-6.559 5.353-11.912 11.912-11.912 3.102 0 6.01 1.242 8.199 3.429 2.191 2.189 3.432 5.101 3.432 8.197 0 6.56-5.353 11.914-11.912 11.914-1.942 0-3.877-.572-5.558-1.637l-6.208 1.625zm6.559-4.894c1.378.854 2.946 1.293 4.545 1.293 5.589 0 10.128-4.539 10.128-10.126 0-5.587-4.539-10.129-10.128-10.129s-10.129 4.542-10.129 10.129c0 1.543.364 3.064 1.054 4.437l-1.611 5.901 5.901-1.611zm4.722-1.353l-.32-.178c-.201-.107-.442-.205-.623-.205-.182 0-.329.076-.462.205-.138.138-.475.462-.572.562-.097.098-.198.113-.377.067-.179-.046-1.099-.404-2.09-.966-.777-.43-1.309-1.004-1.579-1.472-.27-.468-.03-.728.1-.856s.298-.201.442-.338c.144-.137.194-.298.289-.476.097-.178.049-.335-.02-.472s-.442-1.899-.604-2.305c-.161-.406-.326-.349-.46-.356-.134-.007-.291-.019-.44-.019-.148 0-.387.054-.592.253-.205.192-.79.769-.79 1.867s.803 2.164.912 2.316c.112.155 1.583 2.417 3.83 3.398 2.247.981 2.709.839 3.208.79.499-.05 1.378-.562 1.577-1.114s.2-.99.139-1.119c-.061-.129-.224-.199-.461-.328z"/></svg>
@@ -632,7 +591,6 @@
                     <p class="text-sm">contato@hollatelecom.com.br</p>
                 </div>
             </div>
-            <!-- Links para Área do Cliente e FAQ -->
             <div class="mt-16 flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
                 <a href="https://wktelecom.sgp.net.br/accounts/central/login" target="_blank" class="inline-block bg-holla-blue hover:bg-holla-blue-dark text-white font-bold py-3 px-6 rounded-full transition duration-300">Área do Cliente</a>
                 <a href="#faq" class="inline-block bg-gray-300 hover:bg-gray-400 text-holla-blue font-bold py-3 px-6 rounded-full transition duration-300">FAQ - Perguntas Frequentes</a>
@@ -644,12 +602,10 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer class="bg-gray-900 text-white py-8 px-4 text-center">
         <div class="container mx-auto">
-            <p class="mb-4">&copy; 2025 Holla Telecom. Todos os direitos reservados.</p>
+            <p class="mb-4">© 2025 Holla Telecom. Todos os direitos reservados.</p>
             <div class="flex justify-center space-x-6 mb-4">
-                <!-- Links para redes sociais -->
                 <a href="https://www.facebook.com/hollatelecom" target="_blank" class="text-gray-400 hover:text-holla-orange transition duration-300">
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
                 </a>
@@ -657,11 +613,9 @@
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.444 3.323c2.722 0 3.056.01 4.122.06c1.066.05 1.791.217 2.427.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 011.153 1.772c.248.636.415 1.36.465 2.427.049 1.066.06 1.4.06 4.122s-.01 3.057-.06 4.123c-.05 1.066-.217 1.791-.465 2.427a4.908 4.908 0 01-1.153 1.772c-.555.556-1.111.9-1.772 1.153-.636.248-1.36.415-2.427.465-1.066.049-1.4.06-4.122.06s-3.057-.01-4.123-.06c-1.066-.05-1.79-.217-2.427-.465a4.908 4.908 0 01-1.772-1.153 4.908 4.908 0 01-1.153-1.772c-.248-.637-.415-1.361-.465-2.427-.049-1.066-.06-1.4-.06-4.123s.01-3.056.06-4.122c.05-1.066.217-1.791.465-2.427a4.908 4.908 0 011.153-1.772A4.908 4.908 0 015.635 3.79c.637-.248 1.361-.415 2.427-.465C9.128 3.01 9.462 3 12.444 3zm0 2.163a7.886 7.886 0 100 15.772 7.886 7.886 0 000-15.772zM12.444 7.6a4.844 4.844 0 110 9.689 4.844 4.844 0 010-9.689zM19.866 5.378a1.432 1.432 0 100 2.864 1.432 1.432 0 000-2.864z" clip-rule="evenodd" /></svg>
                 </a>
                 <a href="https://www.tiktok.com/@hollatelecom" target="_blank" class="text-gray-400 hover:text-holla-orange transition duration-300">
-                    <!-- TikTok Icon (Simplified SVG example) -->
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 0H8C3.582 0 0 3.582 0 8v8c0 4.418 3.582 8 8 8h8c4.418 0 8-3.582 8-8V8c0-4.418-3.582-8-8-8zm-2 15h-2v-4h-2v4h-2v-6h6v6zm5-8h-3v8h3V7z"/></svg>
                 </a>
                 <a href="https://www.kwai.com/@hollatelecom" target="_blank" class="text-gray-400 hover:text-holla-orange transition duration-300">
-                    <!-- Kwai Icon (Simplified SVG example, can be replaced with a more accurate one) -->
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.637 18.005l-4.733-4.734c-.39-.39-.39-1.024 0-1.414l.707-.707c.39-.39 1.024-.39 1.414 0l3.012 3.012 5.385-5.385c.39-.39 1.024-.39 1.414 0l.707.707c.39.39.39 1.024 0 1.414l-6.8 6.8c-.39.39-1.024.39-1.414 0z"/></svg>
                 </a>
                 <a href="https://www.youtube.com/HollaTelecom" target="_blank" class="text-gray-400 hover:text-holla-orange transition duration-300">
@@ -673,7 +627,6 @@
         </div>
     </footer>
 
-    <!-- Botão de Voltar ao Topo -->
     <button id="scrollToTopBtn" class="fixed bottom-8 right-8 bg-holla-blue text-white p-4 rounded-full shadow-lg opacity-0 transition-opacity duration-300 hover:bg-holla-blue-dark">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
     </button>
@@ -739,7 +692,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
     </script>
-    <iframe src="..." width="300px" height="400px" style="border:none; margin: 20px auto; display: block;"></iframe>
-       <script src="https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/10/20250628103157-6APT9GJU.json" defer></script>
-       </body>
+    
+    </body>
 </html>
