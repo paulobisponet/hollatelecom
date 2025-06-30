@@ -946,9 +946,122 @@
         });
     </script>
 
-    <!-- Chatbot Botpress - Código Oficial -->
+    <!-- Chatbot Botpress - Código Oficial Corrigido -->
     <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2025/06/28/10/20250628103157-A3QWJHP.js"></script>
+
+    <!-- Script para corrigir redirecionamento do WhatsApp -->
+    <script>
+        // Aguardar o DOM carregar completamente
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🔄 Iniciando configuração do webchat...');
+            
+            // Função para substituir links do WhatsApp pelo webchat
+            function replaceWhatsAppLinks() {
+                // Encontrar todos os links do WhatsApp que mencionam Juninho
+                const whatsappLinks = document.querySelectorAll('a[href*="wa.me"][href*="Juninho"], a[href*="whatsapp"][href*="Juninho"]');
+                
+                whatsappLinks.forEach(function(link) {
+                    console.log('🔗 Link do WhatsApp encontrado:', link.href);
+                    
+                    // Substituir o comportamento do link
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault(); // Prevenir redirecionamento para WhatsApp
+                        
+                        console.log('🤖 Abrindo webchat em vez do WhatsApp');
+                        
+                        // Tentar abrir o webchat do Botpress
+                        if (window.botpressWebChat && window.botpressWebChat.open) {
+                            window.botpressWebChat.open();
+                        } else {
+                            // Se o Botpress não estiver carregado, procurar pelo botão do widget
+                            const chatButton = document.querySelector('.bpw-widget-btn, #bp-widget button, [data-testid="widget-trigger"]');
+                            if (chatButton) {
+                                chatButton.click();
+                            } else {
+                                console.log('⚠️ Webchat não encontrado, redirecionando para WhatsApp como fallback');
+                                window.open(this.href, '_blank');
+                            }
+                        }
+                    });
+                    
+                    // Atualizar texto do link se necessário
+                    if (link.textContent.includes('WhatsApp')) {
+                        link.innerHTML = link.innerHTML.replace('WhatsApp', 'Chat');
+                    }
+                });
+            }
+            
+            // Executar após um delay para garantir que o DOM está completo
+            setTimeout(replaceWhatsAppLinks, 1000);
+            
+            // Executar novamente após 3 segundos para pegar elementos carregados dinamicamente
+            setTimeout(replaceWhatsAppLinks, 3000);
+        });
+
+        // Aguardar o webchat carregar completamente
+        window.addEventListener('load', function() {
+            // Verificar se o Botpress carregou
+            const checkBotpress = setInterval(function() {
+                if (window.botpressWebChat) {
+                    console.log('✅ Botpress Webchat carregado com sucesso!');
+                    
+                    // Personalização adicional após carregamento
+                    setTimeout(function() {
+                        const chatWidget = document.querySelector('#bp-widget');
+                        if (chatWidget) {
+                            console.log('✅ Widget do chat encontrado e personalizado!');
+                            
+                            // Aplicar z-index alto
+                            chatWidget.style.zIndex = '9999';
+                            
+                            // Adicionar title ao botão para acessibilidade
+                            const chatButton = document.querySelector('.bpw-widget-btn');
+                            if (chatButton) {
+                                chatButton.setAttribute('title', 'Conversar com Juninho - Assistente da Holla Telecom');
+                                chatButton.setAttribute('aria-label', 'Abrir chat com assistente virtual');
+                                
+                                // Garantir que o botão abre o chat
+                                chatButton.addEventListener('click', function() {
+                                    console.log('🤖 Botão do webchat clicado');
+                                });
+                            }
+                        }
+                        
+                        // Substituir links do WhatsApp novamente após o webchat carregar
+                        setTimeout(function() {
+                            const whatsappLinks = document.querySelectorAll('a[href*="wa.me"][href*="Juninho"]');
+                            whatsappLinks.forEach(function(link) {
+                                link.addEventListener('click', function(e) {
+                                    e.preventDefault();
+                                    console.log('🤖 Abrindo webchat (pós-carregamento)');
+                                    
+                                    if (window.botpressWebChat && window.botpressWebChat.open) {
+                                        window.botpressWebChat.open();
+                                    } else {
+                                        const chatBtn = document.querySelector('.bpw-widget-btn');
+                                        if (chatBtn) {
+                                            chatBtn.click();
+                                        }
+                                    }
+                                });
+                            });
+                        }, 1000);
+                        
+                    }, 2000);
+                    
+                    clearInterval(checkBotpress);
+                }
+            }, 1000);
+            
+            // Timeout para fallback se não carregar em 15 segundos
+            setTimeout(function() {
+                if (!window.botpressWebChat || !document.querySelector('#bp-widget')) {
+                    console.log('⚠️ Webchat não carregou, mantendo links do WhatsApp');
+                }
+            }, 15000);
+        });
+    </script>
 
     <!-- CSS personalizado para o webchat da Holla Telecom -->
     <style>
@@ -1064,100 +1177,18 @@
                 max-height: 70vh !important;
             }
         }
-    </style>
 
-    <!-- Script para inicialização e personalização adicional -->
-    <script>
-        // Aguardar o webchat carregar completamente
-        window.addEventListener('load', function() {
-            // Verificar se o Botpress carregou
-            const checkBotpress = setInterval(function() {
-                if (window.botpressWebChat) {
-                    console.log('✅ Botpress Webchat carregado com sucesso!');
-                    
-                    // Personalização adicional após carregamento
-                    setTimeout(function() {
-                        const chatWidget = document.querySelector('#bp-widget');
-                        if (chatWidget) {
-                            console.log('✅ Widget do chat encontrado e personalizado!');
-                            
-                            // Aplicar z-index alto
-                            chatWidget.style.zIndex = '9999';
-                            
-                            // Adicionar title ao botão para acessibilidade
-                            const chatButton = document.querySelector('.bpw-widget-btn');
-                            if (chatButton) {
-                                chatButton.setAttribute('title', 'Conversar com Juninho - Assistente da Holla Telecom');
-                                chatButton.setAttribute('aria-label', 'Abrir chat com assistente virtual');
-                            }
-                        }
-                    }, 2000);
-                    
-                    clearInterval(checkBotpress);
-                }
-            }, 1000);
-            
-            // Timeout para fallback se não carregar em 15 segundos
-            setTimeout(function() {
-                if (!window.botpressWebChat || !document.querySelector('#bp-widget')) {
-                    console.log('⚠️ Webchat não carregou, criando fallback...');
-                    createFallbackWidget();
-                }
-            }, 15000);
-        });
-
-        // Widget de fallback em caso de falha
-        function createFallbackWidget() {
-            const fallbackWidget = document.createElement('div');
-            fallbackWidget.innerHTML = `
-                <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
-                    <div id="fallback-chat-btn" style="width: 60px; height: 60px; background: #FF7A00; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 20px rgba(255, 122, 0, 0.3); display: flex; align-items: center; justify-content: center; transition: all 0.3s; animation: pulse 2s infinite;">
-                        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
-                            <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4v3c0 .6.4 1 1 1 .2 0 .5-.1.7-.3L14.4 18H20c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/>
-                        </svg>
-                    </div>
-                    <div id="fallback-chat-window" style="position: absolute; bottom: 70px; right: 0; width: 300px; background: white; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: none; overflow: hidden;">
-                        <div style="background: #001B3A; color: white; padding: 15px; text-align: center;">
-                            <strong>Juninho - Holla Telecom</strong>
-                        </div>
-                        <div style="padding: 20px; text-align: center;">
-                            <div style="margin-bottom: 15px;">
-                                <img src="images/juninho-avatar.jpg" alt="Juninho" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'">
-                            </div>
-                            <p style="margin: 0 0 15px 0; color: #001B3A;">Olá! Sou o Juninho, assistente da Holla Telecom.</p>
-                            <a href="https://wa.me/5581996946144?text=Olá! Gostaria de falar com o Juninho sobre os planos da Holla Telecom." 
-                               target="_blank"
-                               style="background: #FF7A00; color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block; transition: background 0.3s;"
-                               onmouseover="this.style.background='#E66C00'"
-                               onmouseout="this.style.background='#FF7A00'">
-                               💬 Conversar no WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            `;
-            
-            document.body.appendChild(fallbackWidget);
-            
-            // Eventos do fallback
-            document.getElementById('fallback-chat-btn').addEventListener('click', function() {
-                const window = document.getElementById('fallback-chat-window');
-                window.style.display = window.style.display === 'none' ? 'block' : 'none';
-            });
-            
-            // Hover effect
-            const btn = document.getElementById('fallback-chat-btn');
-            btn.addEventListener('mouseenter', function() {
-                this.style.background = '#E66C00';
-                this.style.transform = 'scale(1.1)';
-            });
-            btn.addEventListener('mouseleave', function() {
-                this.style.background = '#FF7A00';
-                this.style.transform = 'scale(1)';
-            });
+        /* Estilo para links que foram convertidos */
+        .webchat-converted {
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
         }
-    </script>
+        
+        .webchat-converted:hover {
+            transform: scale(1.02) !important;
+        }
+    </style>
 
 </body>
 </html>
-                                
+                        
